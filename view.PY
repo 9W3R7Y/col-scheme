@@ -682,13 +682,13 @@ show = False
 
 while True:
 #    try:
-    cm_list = list(map(str,input(">>>").split("&")))
+    cm_list = list(map(str,input(">>>").split("\\&")))
     for cm in cm_list:
         print(cm)
         newpath, newoption = map(str,cm.split(","))
         newpath = newpath.replace('"', '')
 
-        if newoption != "_":option = option=list(map(str,newoption.split(":")))
+        if newoption != "\\_":option = option=list(map(str,newoption.split(":")))
 
         if len(option)==2:
             [option,step]=option
@@ -698,7 +698,7 @@ while True:
             option=option[0]
             step=1
 
-        if newpath == "_":None
+        if newpath == "\\_":None
 
         elif option[0] == "g":
             metapath = newpath
